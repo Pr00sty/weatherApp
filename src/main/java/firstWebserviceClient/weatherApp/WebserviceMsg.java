@@ -2,6 +2,8 @@ package firstWebserviceClient.weatherApp;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.ArrayList;
+import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class WebserviceMsg {
@@ -10,6 +12,7 @@ public class WebserviceMsg {
     }
 
     private Coord coord;
+    private List<Weather> weather;
     private String base;
     @JsonProperty("main")
     private  MainWeatherData mainWeatherData;
@@ -24,6 +27,10 @@ public class WebserviceMsg {
 
     public void setCoord(Coord coord) {
         this.coord = coord;
+    }
+
+    public void setWeather(List<Weather> weather) {
+        this.weather = weather;
     }
 
     public String getBase() {
@@ -70,6 +77,7 @@ public class WebserviceMsg {
     public String toString() {
         return "WebserviceMsg{" +
                 "coord=" + coord +
+                ", weather=" + weather +
                 ", base='" + base + '\'' +
                 ", mainWeatherData=" + mainWeatherData +
                 ", visibility='" + visibility + '\'' +
