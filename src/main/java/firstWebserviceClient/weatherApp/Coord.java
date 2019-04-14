@@ -3,7 +3,6 @@ package firstWebserviceClient.weatherApp;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-
 public class Coord {
     private double lon;
     private double lat;
