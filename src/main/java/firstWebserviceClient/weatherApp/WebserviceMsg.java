@@ -15,6 +15,7 @@ public class WebserviceMsg {
     private  MainWeatherData mainWeatherData;
     private String visibility;
     private int dt;
+    private Sys sys;
     private int id;
     private String name;
     private int cod;
@@ -27,12 +28,20 @@ public class WebserviceMsg {
         return base;
     }
 
+    public void setMainWeatherData(MainWeatherData mainWeatherData) {
+        this.mainWeatherData = mainWeatherData;
+    }
+
     public String getVisibility() {
         return visibility;
     }
 
     public int getDt() {
         return dt;
+    }
+
+    public void setSys(Sys sys) {
+        this.sys = sys;
     }
 
     public int getId() {
@@ -55,6 +64,7 @@ public class WebserviceMsg {
                 ", mainWeatherData=" + mainWeatherData +
                 ", visibility='" + visibility + '\'' +
                 ", dt=" + dt +
+                ", sys=" + sys +
                 ", id=" + id +
                 ", name='" + name + '\'' +
                 ", cod=" + cod +

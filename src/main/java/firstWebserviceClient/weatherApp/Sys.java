@@ -1,0 +1,49 @@
+package firstWebserviceClient.weatherApp;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Sys {
+    private int type;
+    private int id;
+    private double message;
+    private String country;
+    private int sunrise;
+    private int sunset;
+
+    public int getType() {
+        return type;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public double getMessage() {
+        return message;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public int getSunrise() {
+        return sunrise;
+    }
+
+    public int getSunset() {
+        return sunset;
+    }
+
+    @Override
+    public String toString() {
+        return "Sys{" +
+                "type=" + type +
+                ", id=" + id +
+                ", message=" + message +
+                ", country='" + country + '\'' +
+                ", sunrise=" + sunrise +
+                ", sunset=" + sunset +
+                '}';
+    }
+}
