@@ -14,6 +14,7 @@ public class WebserviceMsg {
     @JsonProperty("main")
     private  MainWeatherData mainWeatherData;
     private String visibility;
+    private Clouds clouds;
     private int dt;
     private Sys sys;
     private int id;
@@ -34,6 +35,10 @@ public class WebserviceMsg {
 
     public String getVisibility() {
         return visibility;
+    }
+
+    public void setClouds(Clouds clouds) {
+        this.clouds = clouds;
     }
 
     public int getDt() {
@@ -63,6 +68,7 @@ public class WebserviceMsg {
                 ", base='" + base + '\'' +
                 ", mainWeatherData=" + mainWeatherData +
                 ", visibility='" + visibility + '\'' +
+                ", clouds=" + clouds +
                 ", dt=" + dt +
                 ", sys=" + sys +
                 ", id=" + id +
